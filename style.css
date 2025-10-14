@@ -1,0 +1,113 @@
+/* Gaya dasar */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #a1c4fd, #c2e9fb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Frame HP */
+.phone-frame {
+    width: 280px;
+    height: 560px;
+    background: #111;
+    border-radius: 40px;
+    padding: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Layar HP */
+.screen {
+    background: #fff;
+    border-radius: 30px;
+    width: 92%;               /* dikecilkan dari 100% → 92% */
+    height: 92%;              /* dikecilkan biar lebih masuk ke dalam frame */
+    padding: 15px;            /* dari 20px jadi 15px */
+    color: #222;
+    text-align: center;
+    overflow-y: auto;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.15);
+}
+
+
+/* Konten di dalam layar */
+h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #2d2d2d;
+}
+
+h2 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.profile {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 15px 0;
+    border: 3px solid #0077ff;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+h3 {
+    margin-top: 10px;
+    color: #333;
+    font-size: 16px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #dcdcdc;
+    margin: 8px auto;
+    padding: 10px 15px;
+    border-radius: 10px;
+    width: 75%;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+li:hover {
+    background: #ffd6d6;
+    transform: scale(1.05);
+}
+
+a {
+    color: #0077ff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Scroll bar layar HP */
+.screen::-webkit-scrollbar {
+    width: 6px;
+}
+
+.screen::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 10px;
+}
