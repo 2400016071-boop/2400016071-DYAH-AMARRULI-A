@@ -1,0 +1,160 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ====== GRID LAYOUT UTAMA ====== */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  min-height: 100vh;
+  background-color: #f2f9ff;
+}
+
+.header {
+  grid-area: header;
+  background-color: #69b8f5;
+  color: white;
+  padding: 20px 40px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.main-content {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #69b8f5;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+}
+
+/* ====== NAVIGASI (FLEXBOX) ====== */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-list a:hover {
+  text-decoration: underline;
+}
+
+/* ====== CARD STYLE ====== */
+.card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 170, 255, 0.2);
+  max-width: 700px;
+  width: 100%;
+  padding: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* ====== BAGIAN ABOUT ====== */
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #69b8f5;
+  object-fit: cover;
+  margin: 15px 0;
+}
+
+.about p {
+  color: #555;
+  line-height: 1.7;
+}
+
+/* ====== BAGIAN HOBI (FLEXBOX) ====== */
+.hobi-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.hobi-item {
+  background-color: #d9f2ff;
+  color: #333;
+  padding: 10px 25px;
+  border-radius: 25px;
+  box-shadow: 0 2px 5px rgba(0, 170, 255, 0.3);
+  transition: 0.3s ease;
+  font-weight: 500;
+}
+
+.hobi-item:hover {
+  transform: translateY(-5px);
+  background-color: #bde8ff;
+}
+
+/* ====== KONTAK ====== */
+.contact a {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* ====== MEDIA QUERY (RESPONSIF) ====== */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .main-content {
+    padding: 20px 10px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .hobi-list {
+    flex-direction: column;
+  }
+
+  .hobi-item {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
