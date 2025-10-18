@@ -4,42 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio Dyah Amarruli</title>
-    <link rel="stylesheet" href="stylee.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Dyah Amarruli</h1>
-        <h2>Mahasiswa Sistem Informasi</h2>
-    </header>
+    <div class="grid-container">
+        
+        <!-- HEADER -->
+        <header class="header">
+            <div class="nav-container">
+                <h1>Dyah Amarruli</h1>
+                <nav>
+                    <ul class="nav-list">
+                        <li><a href="#tentang">Tentang</a></li>
+                        <li><a href="#hobi">Hobi</a></li>
+                        <li><a href="#kontak">Kontak</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-    <main>
-        <section class="intro">
-            <p>
-                Halo! Saya adalah seorang mahasiswa yang bersemangat untuk belajar tentang pengembangan web. 
-                Saya suka memecahkan masalah dan menciptakan aplikasi yang berguna bagi orang lain.
-            </p>
-            <img src="dyah.jpg" alt="Foto profil Dyah Amarruli" class="profile">
-        </section>
+        <!-- KONTEN UTAMA -->
+        <main class="main-content">
+            <!-- Bagian Tentang -->
+            <section id="tentang" class="card about">
+                <h2>Tentang Saya</h2>
+                <img src="dyah.jpg" alt="Foto profil Dyah Amarruli" class="profile-img">
+                <p>
+                    Halo! Saya adalah seorang mahasiswa yang bersemangat untuk belajar tentang pengembangan web. 
+                    Saya suka memecahkan masalah dan menciptakan aplikasi yang berguna bagi orang lain.
+                </p>
+            </section>
 
-        <section class="hobi">
-            <h3>Hobi Saya:</h3>
-            <ul>
-                <li>🎬 Nonton Film</li>
-                <li>🎮 Main</li>
-                <li>🍰 Jajan</li>
-            </ul>
-        </section>
+            <!-- Bagian Hobi -->
+            <section id="hobi" class="card portfolio">
+                <h2>Hobi Saya</h2>
+                <div class="hobi-list">
+                    <div class="hobi-item">🎬 Nonton Film</div>
+                    <div class="hobi-item">🎮 Main</div>
+                    <div class="hobi-item">🍰 Jajan</div>
+                </div>
+            </section>
 
-        <section class="kontak">
-            <p>
-                Kunjungi profil Instagram saya di 
-                <a href="https://www.instagram.com/dyahamr_?igsh=MWc2bmR3cXYzYTJnaA==" target="_blank">sini</a>.
-            </p>
-        </section>
-    </main>
+            <!-- Bagian Kontak -->
+            <section id="kontak" class="card contact">
+                <h2>Kontak</h2>
+                <p>
+                    Kunjungi profil Instagram saya di 
+                    <a href="https://www.instagram.com/dyahamr_?igsh=MWc2bmR3cXYzYTJnaA==" target="_blank">sini</a>.
+                </p>
+            </section>
+        </main>
 
-    <footer>
-        <p>© 2025 Dyah Amarruli | Portofolio Pribadi</p>
-    </footer>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p>© 2025 Dyah Amarruli</p>
+        </footer>
+    </div>
 </body>
 </html>
+
