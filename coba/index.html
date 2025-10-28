@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="controls">
+    <label>Background Color:
+      <select id="bgColor">
+        <option value="#f0f4ff">Soft Blue</option>
+        <option value="#fff">White</option>
+        <option value="#fce4ec">Pink</option>
+        <option value="#e8f5e9">Mint</option>
+        <option value="#fff3e0">Peach</option>
+      </select>
+    </label>
+
+    <label>Font Style:
+      <select id="fontStyle">
+        <option value="Poppins, sans-serif">Poppins</option>
+        <option value="Roboto, sans-serif">Roboto</option>
+        <option value="Georgia, serif">Georgia</option>
+        <option value="Courier New, monospace">Courier</option>
+      </select>
+    </label>
+
+    <label>Font Size:
+      <input type="range" id="fontSize" min="12" max="24" value="16">
+    </label>
+
+    <button id="toggleMode">🌙 Dark Mode</button>
+  </div>
+
+  <div class="todo-container">
+    <h1>My To-Do List</h1>
+    <div class="input-group">
+      <input type="text" id="taskInput" placeholder="Add a new task..." />
+      <button id="addTaskBtn">Add</button>
+    </div>
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
