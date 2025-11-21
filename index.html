@@ -1,64 +1,193 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Dyah Amarruli</title>
-    <link rel="stylesheet" href="styleee.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apollo Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        apolloBlue: "#2563EB",
+                        apolloDark: "#0F172A",
+                        apolloGray: "#64748B",
+                    },
+                },
+            },
+        };
+    </script>
 </head>
-<body>
-    <div class="grid-container">
-        
-        <!-- HEADER -->
-        <header class="header">
-            <div class="nav-container">
-                <h1>Dyah Amarruli</h1>
-                <nav>
-                    <ul class="nav-list">
-                        <li><a href="#tentang">Tentang</a></li>
-                        <li><a href="#hobi">Hobi</a></li>
-                        <li><a href="#kontak">Kontak</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
 
-        <!-- KONTEN UTAMA -->
-        <main class="main-content">
-            <!-- Bagian Tentang -->
-            <section id="tentang" class="card about">
-                <h2>Tentang Saya</h2>
-                <img src="dyah.jpg" alt="Foto profil Dyah Amarruli" class="profile-img">
-                <p>
-                    Halo! Saya adalah seorang mahasiswa yang bersemangat untuk belajar tentang pengembangan web. 
-                    Saya suka memecahkan masalah dan menciptakan aplikasi yang berguna bagi orang lain.
-                </p>
-            </section>
+<body class="font-sans text-gray-900">
 
-            <!-- Bagian Hobi -->
-            <section id="hobi" class="card portfolio">
-                <h2>Hobi Saya</h2>
-                <div class="hobi-list">
-                    <div class="hobi-item">🎬 Nonton Film</div>
-                    <div class="hobi-item">🎮 Main</div>
-                    <div class="hobi-item">🍰 Jajan</div>
-                </div>
-            </section>
+<!-- ========== NAVBAR ========== -->
+<header class="w-full border-b bg-white">
+    <nav class="max-w-6xl mx-auto flex justify-between items-center py-5 px-4">
+        <!-- Logo -->
+        <div class="text-2xl font-extrabold text-apolloBlue">APOLLO</div>
 
-            <!-- Bagian Kontak -->
-            <section id="kontak" class="card contact">
-                <h2>Kontak</h2>
-                <p>
-                    Kunjungi profil Instagram saya di 
-                    <a href="https://www.instagram.com/dyahamr_?igsh=MWc2bmR3cXYzYTJnaA==" target="_blank">sini</a>.
-                </p>
-            </section>
-        </main>
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex gap-8 text-gray-600 font-medium">
+            <li><a href="#" class="hover:text-apolloBlue">Home</a></li>
+            <li><a href="#" class="hover:text-apolloBlue">Product</a></li>
+            <li><a href="#" class="hover:text-apolloBlue">Contact</a></li>
+        </ul>
 
-        <!-- FOOTER -->
-        <footer class="footer">
-            <p>© 2025 Dyah Amarruli</p>
-        </footer>
+        <!-- Hamburger -->
+        <button class="md:hidden text-3xl" id="hamburgerBtn">☰</button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden flex-col px-4 pb-4 md:hidden bg-white border-b">
+        <a href="#" class="py-2 font-medium">Home</a>
+        <a href="#" class="py-2 font-medium">Product</a>
+        <a href="#" class="py-2 font-medium">Contact</a>
     </div>
+</header>
+
+<!-- ========== HERO SECTION ========== -->
+<section class="max-w-6xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-12 items-center">
+    
+    <!-- Left -->
+    <div>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+            LEARN, BUILD, & SHOWCASE <br>
+            ALL IN ONE PLATFORM
+        </h1>
+
+        <p class="mt-4 text-apolloGray leading-relaxed">
+            Apollo is the advanced engineering and science learning laboratory 
+            designed to help you build exceptional projects and real-world experience.
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-4">
+            <a class="px-6 py-3 bg-apolloBlue text-white rounded-lg font-medium shadow hover:bg-blue-700 cursor-pointer">
+                Get Started Free
+            </a>
+            <a class="px-6 py-3 border-2 border-apolloBlue text-apolloBlue rounded-lg font-medium hover:bg-blue-50 cursor-pointer">
+                Explore Features
+            </a>
+        </div>
+    </div>
+
+    <!-- Right Image -->
+    <div>
+        <img src="pertemuan9-p5slicing/Frame 342.png" alt="Hero" class="w-full">
+    </div>
+
+</section>
+
+<!-- ========== FEATURES SECTION ========== -->
+<section class="py-20 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+
+        <h2 class="text-2xl font-bold">What You’ll Get With Apollo</h2>
+        <p class="mt-2 text-apolloGray">
+            A powerful ecosystem designed to support your learning, collaboration, and innovation.
+        </p>
+
+        <!-- Cards -->
+        <div class="grid md:grid-cols-3 gap-8 mt-12">
+
+            <!-- Card -->
+            <div class="p-8 bg-white rounded-2xl shadow-md">
+                <img src="assets/icons/icon1.png" class="w-14 mx-auto mb-4">
+                <h3 class="font-semibold text-lg">Advanced Learning System</h3>
+                <p class="mt-2 text-sm text-apolloGray">
+                    Structured modules with hands-on engineering experience.
+                </p>
+            </div>
+
+            <!-- Card -->
+            <div class="p-8 bg-white rounded-2xl shadow-md">
+                <img src="assets/icons/icon2.png" class="w-14 mx-auto mb-4">
+                <h3 class="font-semibold text-lg">Project-Based Practice</h3>
+                <p class="mt-2 text-sm text-apolloGray">
+                    Solve real problems and build professional-quality projects.
+                </p>
+            </div>
+
+            <!-- Card -->
+            <div class="p-8 bg-white rounded-2xl shadow-md">
+                <img src="assets/icons/icon3.png" class="w-14 mx-auto mb-4">
+                <h3 class="font-semibold text-lg">Portfolio Showcase</h3>
+                <p class="mt-2 text-sm text-apolloGray">
+                    Display your best works and grow your opportunities.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ========== CTA SECTION ========== -->
+<section class="py-20">
+    <div class="max-w-4xl mx-auto bg-blue-100 border border-blue-200 rounded-2xl px-8 py-16 text-center">
+        
+        <img src="assets/icons/rocket.png" class="w-12 mx-auto mb-5">
+
+        <h2 class="text-3xl font-bold">Ready to Launch Your Journey?</h2>
+        
+        <p class="mt-2 text-apolloGray max-w-xl mx-auto">
+            Join Apollo today and experience the future of engineering, technology,
+            and collaborative learning.
+        </p>
+
+        <button class="mt-8 px-8 py-3 bg-apolloBlue text-white rounded-lg font-medium hover:bg-blue-700 shadow">
+            Get Started Free
+        </button>
+    </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="bg-apolloDark text-white py-16">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-12">
+
+        <div>
+            <h3 class="text-2xl font-bold">APOLLO</h3>
+            <p class="mt-4 text-gray-400">
+                Learn, build, and grow with the best technology learning ecosystem.
+            </p>
+        </div>
+
+        <div>
+            <h4 class="font-semibold mb-3">Company</h4>
+            <ul class="space-y-2 text-gray-300">
+                <li class="hover:text-white cursor-pointer">About</li>
+                <li class="hover:text-white cursor-pointer">Careers</li>
+                <li class="hover:text-white cursor-pointer">Press</li>
+            </ul>
+        </div>
+
+        <div>
+            <h4 class="font-semibold mb-3">Support</h4>
+            <ul class="space-y-2 text-gray-300">
+                <li class="hover:text-white cursor-pointer">Help Center</li>
+                <li class="hover:text-white cursor-pointer">Contact</li>
+                <li class="hover:text-white cursor-pointer">Privacy Policy</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="text-center mt-10 text-gray-500 text-sm">
+        © 2024 Apollo. All rights reserved.
+    </div>
+</footer>
+
+<!-- ========== JS: Hamburger Menu ========== -->
+<script>
+    const btn = document.getElementById('hamburgerBtn');
+    const menu = document.getElementById('mobileMenu');
+
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+</script>
+
 </body>
 </html>
